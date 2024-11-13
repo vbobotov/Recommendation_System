@@ -14,3 +14,4 @@
     - `pip install -r requirements.txt`
 6. Запустите файл main.py:
     - `python main.py`
+7. Введите ID пользователя во всплывающем окне (в диапозоне от 1 до 9).
