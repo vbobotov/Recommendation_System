@@ -5,14 +5,15 @@ from interface import GUI
 import gdown
 
 
-url_movies = "https://drive.google.com/file/d/1gcA7ALkCFSDwjcIpV-3u6ApD1mD2yKGQ/view?usp=drive_link"
-url_ratings = "https://drive.google.com/file/d/1n6Gw0Iyh9hToocZ37gW3XXqQ-uOk89Rt/view?usp=drive_link"
+url_movies = "https://drive.google.com/uc?id=1gcA7ALkCFSDwjcIpV-3u6ApD1mD2yKGQ"
+url_ratings = "https://drive.google.com/uc?id=1n6Gw0Iyh9hToocZ37gW3XXqQ-uOk89Rt"
 
 MOVIE_TITLES_PATH = "../movie_titles0.csv"
 RATINGS_FILES = "../combined_data_0.txt"
 
 gdown.download(url_movies, MOVIE_TITLES_PATH)
 gdown.download(url_ratings, RATINGS_FILES)
+
 
 def main():
     # Шаг 1: Загрузка данных
