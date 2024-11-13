@@ -4,8 +4,8 @@ from evaluator import Evaluation
 from interface import GUI
 
 
-MOVIE_TITLES_PATH = "movie_titles0.csv"
-RATINGS_FILES = ["combined_data_0.txt"]
+MOVIE_TITLES_PATH = "../movie_titles0.csv"
+RATINGS_FILES = "../combined_data_0.txt"
 
 
 def main():

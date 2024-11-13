@@ -37,18 +37,14 @@ class DataLoader:
         print("Загрузка оценок из текстовых файлов...")
         all_ratings = []
         current_movie_id = None
-        for file_path in self.ratings_files:
-            with open(file_path, 'r') as file:
-                for line in file:
-                    if line.endswith(":\n"):  # идентификатор фильма
-                        current_movie_id = int(line[:-2])
-                    else:
-                        user_id, rating, date = line.split(',')
-                        all_ratings.append((current_movie_id, int(user_id), int(rating)))
-
-            # Создаем DataFrame и сохраняем в кэш
+        with open(self.ratings_files, 'r') as file:
+            for line in file:
+                if line.endswith(":\n"):  # идентификатор фильма
+                    current_movie_id = int(line[:-2])
+                else:
+                    user_id, rating, date = line.split(',')
+                    all_ratings.append((current_movie_id, int(user_id), int(rating)))
             self.ratings = pd.DataFrame(all_ratings, columns=["MovieID", "UserID", "Rating"])
-
         print(f"Загружено {len(self.ratings)} оценок.")
 
     def build_interaction_matrix(self):
