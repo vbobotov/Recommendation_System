@@ -36,7 +36,7 @@ def main():
     print("Оценка качества модели...")
     evaluator = Evaluation(svd_model, data_loader.interaction_matrix)
     evaluation_results = evaluator.evaluate()
-    print("Результаты оценки:", f"RMSE: {evaluation_results["RMSE"]:.4f}", f"MAE: {evaluation_results["MAE"]:.4f}", sep="\n")
+    print("Результаты оценки:", f"RMSE: {evaluation_results['RMSE']:.4f}", f"MAE: {evaluation_results['MAE']:.4f}", sep="\n")
 
     # Шаг 5: Запуск графического интерфейса для рекомендаций
     print("Запуск интерфейса...")
